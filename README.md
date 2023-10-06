@@ -1,14 +1,14 @@
 # 运行文件
 运行系统是Ubuntu，用VSCode 在ros功能包下，需要配置CMakelist。 
-- **在linux上下载VSCode**。
-- **创建工作空间**。打开终端 `Ctrl + Alt + T`, 输入
+- **1. 在linux上下载VSCode**。
+- **2. 创建工作空间**。打开终端 `Ctrl + Alt + T`, 输入
 	```
 	mkdir -p xxxws/src
 	cd xxxws
 	catkin_make
 	code .
 	```
-- **快捷键 `Ctrl + Shift + B` 调用编译**。选择:`catkin_make:build`，可以点击配置设置为默认，修改xxxws/vscode/tasks.json 文件, 删除原文件内容，将以下内容复制进原文件。[VSCode配置教程](http://www.autolabor.com.cn/book/ROSTutorials/chapter1/14-ros-ji-cheng-kai-fa-huan-jing-da-jian/142-an-zhuang-vscode.html)
+- **3. 快捷键 `Ctrl + Shift + B` 调用编译**。选择:`catkin_make:build`，可以点击配置设置为默认，修改xxxws/vscode/tasks.json 文件, 删除原文件内容，将以下内容复制进原文件。[VSCode配置教程](http://www.autolabor.com.cn/book/ROSTutorials/chapter1/14-ros-ji-cheng-kai-fa-huan-jing-da-jian/142-an-zhuang-vscode.html)
 	```
 	{
 	// 有关 tasks.json 格式的文档，请参见
@@ -29,9 +29,9 @@
 	    ]
 	}
 	```
-- **在工作空间创立功能包**。在VSCcode左侧栏`xxxws`目录下右键`src`，选择`Creat Catkin Package`，先输入功能包名称，此处为`Practice`，然后`回车`，再输入依赖，此处为`roscpp rospy std_msgs`。
+- **4. 在工作空间创立功能包**。在VSCcode左侧栏`xxxws`目录下右键`src`，选择`Creat Catkin Package`，先输入功能包名称，此处为`Practice`，然后`回车`，再输入依赖，此处为`roscpp rospy std_msgs`。
 - 在功能包目录`Practice/src`下中粘贴本项目`.cpp`文件。
-- **修改CMakeist.txt**。注意此文件目录是`xxxws/src/Practice/CMakelist.txt。以P45_smart_pointer.cpp 为例。在CMakelist.txt添加
+- **5. 修改CMakeist.txt**。注意此文件目录是`xxxws/src/Practice/CMakelist.txt。以P45_smart_pointer.cpp 为例。在CMakelist.txt添加
 	```
 	add_executable(P45 src/P45_smart_pointer.cpp)
 
@@ -58,4 +58,4 @@
 	...
 	```
 - `Ctrl + Shift + B` 编译文件。
-- **运行可执行文件**。`Ctrl + ~ ` 调用VSCode终端，目录应该在xxxws下，输入`source ./devel/setup.bash`，回车。输入`rosrun practice P45`即可运行。
+- **6. 运行可执行文件**。`Ctrl + ~ ` 调用VSCode终端，目录应该在xxxws下，输入`source ./devel/setup.bash`，回车。输入`rosrun practice P45`即可运行。
