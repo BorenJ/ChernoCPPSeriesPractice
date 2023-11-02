@@ -8,7 +8,7 @@
 	catkin_make
 	code .
 	```
-- **3. 快捷键 `Ctrl + Shift + B` 调用编译**。选择:`catkin_make:build`，可以点击配置设置为默认，修改xxxws/vscode/tasks.json 文件, 删除原文件内容，将以下内容复制进原文件。For more details, please see [VSCode配置教程](http://www.autolabor.com.cn/book/ROSTutorials/chapter1/14-ros-ji-cheng-kai-fa-huan-jing-da-jian/142-an-zhuang-vscode.html)
+- **3. 快捷键 `Ctrl + Shift + B` 调用编译**。点击`catkin_make:build` 右侧的齿轮，修改xxxws/vscode/tasks.json 文件, 删除原文件内容，将以下内容复制进原文件。For more details, please see [VSCode配置教程](http://www.autolabor.com.cn/book/ROSTutorials/chapter1/14-ros-ji-cheng-kai-fa-huan-jing-da-jian/142-an-zhuang-vscode.html)
 	```
 	{
 	// 有关 tasks.json 格式的文档，请参见
